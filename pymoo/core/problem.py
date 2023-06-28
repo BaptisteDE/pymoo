@@ -1,4 +1,5 @@
 from abc import abstractmethod
+from abc import ABC
 
 import numpy as np
 
@@ -117,7 +118,7 @@ class RayParallelization:
         return state
 
 
-class Problem:
+class Problem(ABC):
     def __init__(self,
                  n_var=-1,
                  n_obj=1,
